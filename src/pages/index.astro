@@ -1,5 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { useUser } from '../react-components/hooks/useUser';
+
+const token = Astro.cookies.get('accessToken');
+
+if (Astro.url.pathname.includes('/')) {
+  if (!token.value) return Astro.redirect('/login');
+}
 ---
 
 <Layout title='Home'>
