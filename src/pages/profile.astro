@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import * as jwt from 'jose';
+
+const { value } = Astro.cookies.get('accessToken');
+
+if (!value) return Astro.redirect('/login');
+
+try {
+  await jwt.jwtVerify(
+  value,
+  new TextEncoder().encode(import.meta.env.SECRET)
+);
+} catch (error) {
+  return Astro.redirect('/login')
+}
+---
+
+<Layout title='profile'>
+  <div>profile</div>
+</Layout>

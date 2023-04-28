@@ -1,14 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { useUser } from '../react-components/hooks/useUser';
 
-const token = Astro.cookies.get('accessToken');
-
-if (Astro.url.pathname.includes('/')) {
-  if (!token.value) return Astro.redirect('/login');
+interface Image {
+  id: number;
+  description: string;
+  image: string;
+  user: {
+    name: string;
+    lastname: string
+    id: string
+  };
 }
+
+const response = await fetch('http://localhost:8000/api/images');
+const data: Image[] = await response.json();
 ---
 
 <Layout title='Home'>
-  <div>Home</div>
+  <section>
+    {
+      data.map((image) => (
+        <div>
+          <div>
+            <img src={image.image} width="100" height="100"/>
+          </div>
+          <div>
+            <p>{image.description}</p>
+            <span>{image.user.id}</span>
+          </div>
+        </div>
+      ))
+    }
+  </section>
 </Layout>
