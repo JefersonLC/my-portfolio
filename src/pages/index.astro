@@ -7,8 +7,8 @@ interface Image {
   image: string;
   user: {
     name: string;
-    lastname: string
-    id: string
+    lastname: string;
+    id: string;
   };
 }
 
@@ -19,17 +19,20 @@ const data: Image[] = await response.json();
 <Layout title='Home'>
   <section>
     {
-      data.map((image) => (
-        <div>
+      !response.ok 
+      ? ( <div>404</div>) 
+      : (data.map((image) => (
           <div>
-            <img src={image.image} width="100" height="100"/>
+            <div>
+              <img src={image.image} width='100' height='100' />
+            </div>
+            <div>
+              <p>{image.description}</p>
+              <span>{image.user.id}</span>
+            </div>
           </div>
-          <div>
-            <p>{image.description}</p>
-            <span>{image.user.id}</span>
-          </div>
-        </div>
-      ))
+        ))
+      )
     }
   </section>
 </Layout>
