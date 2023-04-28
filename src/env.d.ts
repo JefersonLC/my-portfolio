@@ -2,7 +2,7 @@
 
 interface ImportMetaEnv {
     readonly SECRET: string
-    // more env variables...
+    readonly API_URL: string
   }
   
   interface ImportMeta {

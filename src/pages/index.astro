@@ -12,27 +12,25 @@ interface Image {
   };
 }
 
-const response = await fetch('http://localhost:8000/api/images');
-const data: Image[] = await response.json();
+const data: Image[] = await fetch(import.meta.env.API_URL + '/images').then(
+  (res) => res.json()
+).catch(e => Astro.redirect('/404'));
 ---
 
 <Layout title='Home'>
   <section>
     {
-      !response.ok 
-      ? ( <div>404</div>) 
-      : (data.map((image) => (
+      data.map((image) => (
+        <div>
           <div>
-            <div>
-              <img src={image.image} width='100' height='100' />
-            </div>
-            <div>
-              <p>{image.description}</p>
-              <span>{image.user.id}</span>
-            </div>
+            <img src={image.image} width='100' height='100' />
           </div>
-        ))
-      )
+          <div>
+            <p>{image.description}</p>
+            <span>{image.user.id}</span>
+          </div>
+        </div>
+      ))
     }
   </section>
 </Layout>
