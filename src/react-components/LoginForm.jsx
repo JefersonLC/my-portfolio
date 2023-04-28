@@ -4,11 +4,9 @@ import { loginInitValues } from '../utils/values';
 import { loginFormFields } from '../utils/forms';
 import { useState } from 'react';
 import { setCookie } from 'cookies-next';
-import { useUser } from './hooks/useUser';
 
 export default function LoginForm() {
   const [error, setError] = useState('');
-  const { payload, errorMessage } = useUser();
 
   async function handleSubmit(values) {
     try {
@@ -56,7 +54,7 @@ export default function LoginForm() {
               <ErrorMessage name={field.name} />
             </div>
           ))}
-          <button type='submit'>Ok</button>
+          <button type='submit'>LogIn</button>
         </Form>
       </>
     </Formik>

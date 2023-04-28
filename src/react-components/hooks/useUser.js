@@ -5,7 +5,7 @@ import * as jwt from 'jose';
 export function useUser() {
   const token = getCookie('accessToken');
 
-  const [payload, setPayload] = useState({});
+  const [user, setUser] = useState(undefined);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -14,9 +14,9 @@ export function useUser() {
         token,
         new TextEncoder().encode('CharlesJefersonLimayCabello21')
       )
-      .then(({ payload }) => setPayload(payload))
-      .catch((err) => setError('Error al inicio de sesión'));
+      .then(({ payload }) => setUser(payload))
+      .catch((err) => setError('Error'));
   }, [token]);
 
-  return { payload, errorMessage: error };
+  return { user, errorMessage: error };
 }
