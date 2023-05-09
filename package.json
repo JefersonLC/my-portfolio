@@ -11,16 +11,10 @@
   },
   "dependencies": {
     "@astrojs/react": "^2.1.1",
-    "@astrojs/vercel": "^3.2.4",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
     "astro": "^2.3.0",
-    "cookies-next": "2.1.1",
-    "formik": "2.2.9",
-    "jose": "4.14.1",
-    "js-cookie": "3.0.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "yup": "1.1.1"
+    "react-dom": "^18.2.0"
   }
 }
