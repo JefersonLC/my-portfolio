@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "react_calculator",
+        "title": "Calculadora",
+        "sourceCode": "https://github.com/JefersonLC/react-calculator",
+        "link": "https://react-calculator-phi-rouge.vercel.app"
+    }, 
+    {
+        "slug": "react_tic-tac-toe",
+        "title": "Tic Tac Toe",
+        "sourceCode": "https://github.com/JefersonLC/react_tic-tac-toe",
+        "link": "https://tictactoe-eta-ivory.vercel.app"
+    }
+]
