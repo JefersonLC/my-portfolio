@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProjectsList from '../react-components/ProjectsList'
+
 ---
 
 <Layout title='Home'>
   <section>
-    Home
+    <ProjectsList client:only />
   </section>
 </Layout>
