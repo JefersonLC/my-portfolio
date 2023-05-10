@@ -1,10 +1,8 @@
 ---
-import LinkList from '../react-components/Navigation/LinkList';
+import LinkList from '../react-components/LinkList';
 ---
 
-<nav>
-  <div>
-    <h3>ImgApp</h3>
-  </div>
+<nav class='container justify-around hidden sm:flex bg-gray-600'>
+  <h3>Portfolio</h3>
   <LinkList client:only='react' />
 </nav>
