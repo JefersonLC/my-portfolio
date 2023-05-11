@@ -1,6 +1,6 @@
 export default function LinkList() {
   return (
-    <nav>
+    <nav className='absolute'>
       <a href='/'>Home</a>
     </nav>
   );
