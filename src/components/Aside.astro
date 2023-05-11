@@ -5,39 +5,30 @@ import LinkList from '../react/Nav';
 <>
   <div
     id='overlay'
-    class='fixed left-0 w-full h-full bg-black bg-opacity-60 z-10'
+    class='fixed left-0 w-full h-full bg-black bg-opacity-60 z-10 hidden'
   >
   </div>
   <button
-    id='openMenuButton'
-    class='fixed top-8 left-0 rounded-r-full bg-green-500 w-12 h-12 border-none cursor-pointer'
+    id='openBtn'
+    class='fixed top-8 left-0 rounded-r-full bg-green-500 w-12 h-12 border-none cursor-pointer sm:hidden'
   >
     Abrir
   </button>
   <aside
     id='aside'
-    class='bg-red-300 fixed top-0 bottom-0 max-w-xs w-full z-20 transition-all'
+    class='bg-red-300 fixed top-0 bottom-0 max-w-xs w-full z-20 -left-80 transition-all'
   >
-    <button id='closeMenuButton'>Cerrar</button>
+    <button id='closeBtn'>Cerrar</button>
     <LinkList />
   </aside>
 </>
 
 <script>
   let visible = false;
-
-  const openButton = document.getElementById(
-    'openMenuButton'
-  ) as HTMLButtonElement;
-
-  const closeButton = document.getElementById(
-    'closeMenuButton'
-  ) as HTMLButtonElement;
-
+  const openBtn = document.getElementById('openBtn') as HTMLButtonElement;
+  const closeBtn = document.getElementById('closeBtn') as HTMLButtonElement;
   const body = document.getElementById('body') as HTMLBodyElement;
-
   const aside = document.getElementById('aside') as HTMLElement;
-
   const overlay = document.getElementById('overlay') as HTMLElement;
 
   function setClasses(): void {
@@ -47,17 +38,28 @@ import LinkList from '../react/Nav';
     aside.classList.remove(!visible ? 'left-0' : '-left-80');
   }
 
-  setClasses();
-
-  openButton.addEventListener('click', (e: Event) => {
+  openBtn.addEventListener('click', () => {
     visible = true;
     setClasses();
     body.classList.add('overflow-hidden');
   });
 
-  closeButton.addEventListener('click', (e: Event) => {
+  closeBtn.addEventListener('click', () => {
     visible = false;
     setClasses();
     body.classList.remove('overflow-hidden');
+  });
+
+  const maxWitdh = 640; //px
+  let actualWidth: number;
+
+  window.addEventListener('resize', () => {
+    actualWidth = window.innerWidth;
+
+    if (actualWidth >= maxWitdh) {
+      visible = false;
+      setClasses();
+      body.classList.remove('overflow-hidden');
+    }
   });
 </script>
