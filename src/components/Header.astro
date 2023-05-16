@@ -1,10 +1,19 @@
 ---
-import LinkList from '../react/Nav';
+import LinkList from '../react/LinkList';
 import TogglerNav from '../react/TogglerNav';
+import Nav from '../react/Nav';
 ---
 
-<header class='flex justify-around fixed top-0 w-full px-5 py-5 bg-slate-800'>
-  <TogglerNav client:load />
-  <h3>Portfolio</h3>
-  <LinkList client:only='react' />
+<header
+  class='fixed top-0 left-0 right-0 px-7 py-5 flex justify-around text-xl z-10 bg-zinc-800'
+>
+  <h2 class="flex-grow">My Portfolio</h2>
+  <div class='flex-grow text-end hidden sm:block'>
+    <LinkList client:load />
+  </div>
+  <div class='flex-grow flex justify-end sm:hidden'>
+    <TogglerNav client:load />
+  </div>
 </header>
+
+<Nav client:load />
