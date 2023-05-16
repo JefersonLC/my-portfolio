@@ -6,7 +6,7 @@ export default function TogglerNav() {
   return (
     <button
       onClick={isVisible ? hideMenu : showMenu}
-      className='dark:text-white dark:hover:text-gray-300'
+      className='dark:text-gray-100 dark:hover:text-green'
     >
       <i className='fa-solid fa-bars' />
     </button>
