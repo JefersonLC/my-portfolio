@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <nav
       className={`fixed w-4/5 left-1/2 -translate-x-1/2 py-2 px-4 rounded-md 
-      backdrop-blur-3xl border-2 flex flex-col gap-2 border-zinc-800 ${menuVisibleStyle}
+      backdrop-blur-lg border-2 flex flex-col gap-2 border-zinc-800 ${menuVisibleStyle}
       transition-all ease-in-out duration-500 sm:hidden`}
     >
       <LinkList />
