@@ -23,7 +23,12 @@ export default function LinkList() {
   return (
     <>
       {links.map(({ href, children }) => (
-        <a href={href} className='sm:ms-3' onClick={hide}>
+        <a
+          key={children}
+          href={href}
+          className='sm:ms-3 sm:hover:text-gray-300'
+          onClick={hide}
+        >
           {children}
         </a>
       ))}
