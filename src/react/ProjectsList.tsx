@@ -1,35 +1,23 @@
 import { useState } from 'react';
 import projects from '../utils/projects.json';
+import ProjectCard from './ProjectCard';
+
+export interface Project {
+  title: string;
+  slug: string;
+  description: string;
+  categories: string[];
+  sourceCode: string;
+  link: string;
+}
 
 export default function ProjectsList() {
-  const currentPage = 1;
-  const maxContent = 1;
-  const maxPages = Array(Math.ceil(projects.length / maxContent)).fill(null);
-
-  function getElementsForPage(pageNumber: number) {
-    const startIndex = (pageNumber - 1) * maxContent;
-    const endIndex = startIndex + maxContent;
-    return [...projects].slice(startIndex, endIndex);
-  }
-
-  const [elements, setElements] = useState(getElementsForPage(currentPage));
-
-  function changePage(page: number) {
-    setElements(getElementsForPage(page));
-  }
+  const [elements, setElements] = useState(projects);
 
   return (
-    <div>
-      {elements.map((project, i) => (
-        <div key={i}>
-          {project.title}
-          <a href={'project/' + project.slug}>Link</a>
-        </div>
-      ))}
-      {maxPages.map((button, i) => (
-        <button key={i} onClick={() => changePage(i + 1)}>
-          {i + 1}
-        </button>
+    <div className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+      {elements.map((project: Project, i) => (
+        <ProjectCard key={i} project={project} />
       ))}
     </div>
   );
