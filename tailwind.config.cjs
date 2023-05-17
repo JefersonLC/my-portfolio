@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     container: { center: true },
     colors: {
-      darkblue: '#0a192f',
+      blue: {
+        100: '#0a192f',
+        200: '#112240',
+      },
       green: '#64ffda',
       white: '#ffffff',
       gray: {
