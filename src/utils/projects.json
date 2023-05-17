@@ -1,13 +1,25 @@
 [
     {
-        "slug": "react_calculator",
         "title": "Calculadora",
+        "slug": "react_calculator",
+        "description": "Una calculadora hecha con React.",
+        "categories": [
+            "react", 
+            "javascript", 
+            "css"
+        ],
         "sourceCode": "https://github.com/JefersonLC/react-calculator",
         "link": "https://react-calculator-phi-rouge.vercel.app"
     }, 
     {
-        "slug": "react_tic-tac-toe",
         "title": "Tic Tac Toe",
+        "slug": "react_tic-tac-toe",
+        "description": "El juego Tic Tac Toe hecha con React.",
+        "categories": [
+            "react", 
+            "javascript", 
+            "css"
+        ],
         "sourceCode": "https://github.com/JefersonLC/react_tic-tac-toe",
         "link": "https://tictactoe-eta-ivory.vercel.app"
     }
