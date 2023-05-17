@@ -1,19 +1,28 @@
 ---
+import ProjectCard from '../components/ProjectCard.astro';
+import Section from '../components/Section.astro';
 import Layout from '../layouts/Layout.astro';
-import ProjectsList from '../react/ProjectsList';
+import projects from '../utils/projects.json';
+
+export interface Project {
+  title: string;
+  slug: string;
+  description: string;
+  categories: string[];
+  sourceCode: string;
+  link: string;
+}
 ---
 
 <Layout title='Home'>
-  <section
-    class='h-screen flex flex-col align-middle justify-center px-4 sm:px-10 gap-3'
-  >
-    <div class='text-green'>
+  <Section>
+    <div class='text-green sm:text-xl'>
       <h2>Hola, me llamo</h2>
     </div>
-    <div class='text-3xl font-semibold text-gray-100'>
+    <div class='text-3xl sm:text-5xl lg:text-7xl font-semibold text-gray-100'>
       <h3>Jeferson Limay.</h3>
     </div>
-    <div class='text-gray-200'>
+    <div class='text-gray-200 sm:text-xl mt-5 max-w-md'>
       <p>
         Soy estudiante de Tecnologías de la Información y Comunicación (TIC).
         Soy programador autodidacta que se dedica realizar cosas pequeñas en la
@@ -24,16 +33,17 @@ import ProjectsList from '../react/ProjectsList';
       <a
         href='https://github.com/JefersonLC'
         class='border py-4 px-6 border-green rounded-md hover:bg-green hover:text-blue-100'
-        >Perfil de GitHub</a
       >
+        Perfil de GitHub
+      </a>
     </div>
-  </section>
-  <section
-    class='h-screen flex flex-col align-middle justify-center px-4 sm:px-10 gap-3'
-  >
-    <div class='text-3xl font-semibold text-gray-100'>
+  </Section>
+  <Section>
+    <div class='text-3xl sm:text-4xl font-semibold text-gray-100'>
       <h2 id='projects'>Algunos proyectos:</h2>
     </div>
-    <ProjectsList client:visible />
-  </section>
+    <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6'>
+      {projects.map((project: Project) => <ProjectCard project={project} />)}
+    </div>
+  </Section>
 </Layout>
