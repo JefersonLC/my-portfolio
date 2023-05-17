@@ -11,10 +11,6 @@ export default function LinkList() {
 
   const links = [
     {
-      href: '#about',
-      children: 'About',
-    },
-    {
       href: '#projects',
       children: 'Projects',
     },
@@ -26,7 +22,7 @@ export default function LinkList() {
         <a
           key={children}
           href={href}
-          className='text-gray text-sm hover:text-green sm:ms-10'
+          className='text-gray-100 text-sm hover:text-green sm:ms-10'
           onClick={hide}
         >
           {children}
