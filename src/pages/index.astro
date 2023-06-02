@@ -1,8 +1,9 @@
 ---
-import ProjectCard from '../components/ProjectCard.astro';
-import Section from '../components/Section.astro';
-import Layout from '../layouts/Layout.astro';
 import projects from '../utils/projects.json';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { Icons } from '../utils/icons';
 
 export interface Project {
   title: string;
@@ -44,6 +45,23 @@ export interface Project {
     </div>
     <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6'>
       {projects.map((project: Project) => <ProjectCard project={project} />)}
+    </div>
+  </Section>
+  <Section>
+    <div class='text-3xl sm:text-4xl font-semibold text-gray-100'>
+      <h2 id='projects'>Herramientas usadas:</h2>
+    </div>
+    <div
+      class='grid grid-cols-2 xl:grid-cols-3 gap-3 mt-6'
+    >
+      {
+        Icons.map((Icon) => (
+          <div class="flex [&>svg]:min-w-[70px] [&>svg]:md:min-w-[10px]">
+            <Icon.icon />
+            <span>{Icon.name}</span>
+          </div>
+        ))
+      }
     </div>
   </Section>
 </Layout>
