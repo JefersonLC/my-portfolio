@@ -1,6 +1,6 @@
 ---
 import type { Project } from '../pages/index.astro';
-import Category from './Category.astro';
+import Language from './Language.astro';
 
 const { project } = Astro.props as { project: Project };
 ---
@@ -26,6 +26,6 @@ const { project } = Astro.props as { project: Project };
     <p class='mt-2 text-gray-200'>{project.description}</p>
   </div>
   <div class='px-6 mt-4 flex gap-2'>
-    {project.categories.map((category) => <Category>{category}</Category>)}
+    {project.languages.map((language) => <Language>{language}</Language>)}
   </div>
 </div>
