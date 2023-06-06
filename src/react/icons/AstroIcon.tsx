@@ -24,7 +24,7 @@ export default function AstroIcon() {
                 strokeDashoffset: 0,
                 strokeLinejoin: 'miter',
                 strokeMiterlimit: 4,
-                fill: '#FFFFF',
+                fill: 'rgb(255,255,255)',
                 fillRule: 'nonzero',
                 opacity: 1,
               }}
