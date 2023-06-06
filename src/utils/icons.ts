@@ -1,43 +1,47 @@
-import HtmlIcon from '../icons/HtmlIcon.astro';
-import CssIcon from '../icons/CssIcon.astro';
-import TailWindIcon from '../icons/TailwindIcon.astro';
-import JavaScriptIcon from '../icons/JavaScriptIcon.astro';
-import TypeScriptIcon from '../icons/TypeScriptIcon.astro';
-import ReactIcon from '../icons/ReactIcon.astro';
-import AstroIcon from '../icons/AstroIcon.astro';
-import NodeIcon from '../icons/NodeIcon.astro';
+import HtmlIcon from '../react/icons/HtmlIcon';
+import CssIcon from '../react/icons/CssIcon';
+import TailWindIcon from '../react/icons/TailwindIcon';
+import JavaScriptIcon from '../react/icons/JavaScriptIcon';
+import TypeScriptIcon from '../react/icons/TypeScriptIcon';
+import ReactIcon from '../react/icons/ReactIcon';
+import AstroIcon from '../react/icons/AstroIcon';
+import NodeIcon from '../react/icons/NodeIcon';
 
 export const Icons = [
-  {
-    name: 'HTML',
-    icon: HtmlIcon,
-  },
-  {
-    name: 'CSS',
-    icon: CssIcon,
-  },
-  {
-    name: 'Tailwind',
-    icon: TailWindIcon,
-  },
-  {
-    name: 'JavaScript',
-    icon: JavaScriptIcon,
-  },
-  {
-    name: 'TypeScript',
-    icon: TypeScriptIcon,
-  },
-  {
-    name: 'React',
-    icon: ReactIcon,
-  },
-  {
-    name: 'Astro',
-    icon: AstroIcon,
-  },
-  {
-    name: 'Node',
-    icon: NodeIcon,
-  },
+  [
+    {
+      name: 'HTML',
+      icon: HtmlIcon,
+    },
+    {
+      name: 'CSS',
+      icon: CssIcon,
+    },
+    {
+      name: 'Tailwind',
+      icon: TailWindIcon,
+    },
+    {
+      name: 'JavaScript',
+      icon: JavaScriptIcon,
+    },
+  ],
+  [
+    {
+      name: 'TypeScript',
+      icon: TypeScriptIcon,
+    },
+    {
+      name: 'React',
+      icon: ReactIcon,
+    },
+    {
+      name: 'Astro',
+      icon: AstroIcon,
+    },
+    {
+      name: 'Node',
+      icon: NodeIcon,
+    },
+  ],
 ];
