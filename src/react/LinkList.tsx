@@ -14,6 +14,10 @@ export default function LinkList() {
       href: '#projects',
       children: 'Projects',
     },
+    {
+      href: '#tools',
+      children: 'Herramientas',
+    },
   ];
 
   return (
