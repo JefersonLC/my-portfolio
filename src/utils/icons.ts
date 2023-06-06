@@ -7,41 +7,41 @@ import ReactIcon from '../react/icons/ReactIcon';
 import AstroIcon from '../react/icons/AstroIcon';
 import NodeIcon from '../react/icons/NodeIcon';
 
-export const Icons = [
+export const icons = [
   [
     {
       name: 'HTML',
-      icon: HtmlIcon,
+      Icon: HtmlIcon,
     },
     {
       name: 'CSS',
-      icon: CssIcon,
+      Icon: CssIcon,
     },
     {
       name: 'Tailwind',
-      icon: TailWindIcon,
+      Icon: TailWindIcon,
     },
     {
       name: 'JavaScript',
-      icon: JavaScriptIcon,
+      Icon: JavaScriptIcon,
     },
   ],
   [
     {
       name: 'TypeScript',
-      icon: TypeScriptIcon,
+      Icon: TypeScriptIcon,
     },
     {
       name: 'React',
-      icon: ReactIcon,
+      Icon: ReactIcon,
     },
     {
       name: 'Astro',
-      icon: AstroIcon,
+      Icon: AstroIcon,
     },
     {
       name: 'Node',
-      icon: NodeIcon,
+      Icon: NodeIcon,
     },
   ],
 ];
