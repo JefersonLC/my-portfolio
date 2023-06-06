@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Carousel from '../react/Carousel';
-import { Icons } from '../utils/icons';
 
 export interface Project {
   title: string;
@@ -52,10 +51,8 @@ export interface Project {
   </Section>
   <Section>
     <div class='text-3xl sm:text-4xl font-semibold text-gray-100'>
-      <h2 id='projects'>Herramientas usadas:</h2>
+      <h2 id='tools'>Herramientas usadas:</h2>
     </div>
-    <div class='grid grid-cols-2 xl:grid-cols-3 gap-3 mt-6'>
-      <Carousel client:load />
-    </div>
+    <Carousel client:load />
   </Section>
 </Layout>
