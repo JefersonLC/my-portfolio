@@ -18,5 +18,15 @@
     "forks": 0,
     "link": "react-calculator-phi-rouge.vercel.app",
     "sourceCode": "https://github.com/JefersonLC/react_calculator"
+  },
+  {
+    "title": "URL Shortener",
+    "description": "URL Shortener made with React and Supabase",
+    "slug": "url-shortener",
+    "languages": ["TypeScript", "JavaScript", "HTML", "CSS"],
+    "stars": 1,
+    "forks": 0,
+    "link": "link-fawn.vercel.app",
+    "sourceCode": "https://github.com/JefersonLC/url-shortener"
   }
 ]
