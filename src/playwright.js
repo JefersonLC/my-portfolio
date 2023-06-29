@@ -1,9 +1,10 @@
-import { firefox } from 'playwright';
 import fs from 'fs/promises';
+import { firefox } from 'playwright';
 
 const links = [
   'https://github.com/JefersonLC/react_tic-tac-toe',
   'https://github.com/JefersonLC/react_calculator',
+  'https://github.com/JefersonLC/url-shortener'
 ];
 
 const browser = await firefox.launch({ headless: true });
