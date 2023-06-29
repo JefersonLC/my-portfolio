@@ -1,4 +1,5 @@
 ---
+import SectionContent from '../components/SectionContent.astro'
 import GitHubIcon from '../icons/social/GitHubIcon.astro'
 import Layout from '../layouts/Layout.astro'
 
@@ -33,8 +34,7 @@ export interface Project {
       </div>
     </section>
     <section>
-      <div id='#about'>
-        <h5 class='mb-6 text-2xl text-gray-100 font-[700]'>Acerca de mí</h5>
+      <SectionContent id='#about' title='Acerca de mí'>
         <div class='text-gray-200'>
           <p class='mb-2 [&>span]:text-green'>
             Desde 2019 estoy estudiando <span>TIC</span> y en 2021 fue que entré en el mundo
@@ -54,7 +54,7 @@ export interface Project {
             <span class='text-gray-100'>;)</span>
           </p>
         </div>
-      </div>
+      </SectionContent>
     </section>
   </main>
 </Layout>
