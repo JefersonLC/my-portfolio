@@ -5,8 +5,8 @@ module.exports = {
     container: { center: true },
     colors: {
       blue: {
-        100: '#0a192f',
-        200: '#112240',
+        100: '#112240',
+        200: '#0a192f',
       },
       green: '#64ffda',
       white: '#ffffff',
