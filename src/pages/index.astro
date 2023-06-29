@@ -1,58 +1,60 @@
 ---
-import projects from '../utils/projects.json';
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/Section.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import Carousel from '../react/Carousel';
+import GitHubIcon from '../icons/social/GitHubIcon.astro'
+import Layout from '../layouts/Layout.astro'
 
 export interface Project {
-  title: string;
-  slug: string;
-  description: string;
-  languages: string[];
-  sourceCode: string;
-  link: string;
-  stars: number;
-  forks: number;
+  title: string
+  slug: string
+  description: string
+  languages: string[]
+  sourceCode: string
+  link: string
+  stars: number
+  forks: number
 }
 ---
 
-<Layout title='Home'>
-  <Section>
-    <div class='text-green sm:text-xl'>
-      <h2>Hola, me llamo</h2>
-    </div>
-    <div class='text-3xl sm:text-5xl lg:text-7xl font-semibold text-gray-100'>
-      <h3>Jeferson Limay.</h3>
-    </div>
-    <div class='text-gray-200 sm:text-xl mt-5 max-w-md'>
-      <p>
-        Soy estudiante de Tecnologías de la Información y Comunicación (TIC).
-        Soy programador autodidacta que se dedica realizar cosas pequeñas en la
-        web :)
-      </p>
-    </div>
-    <div class='text-green mt-12'>
-      <a
-        href='https://github.com/JefersonLC'
-        class='border py-4 px-6 border-green rounded-md hover:bg-green hover:text-blue-100'
-      >
-        Perfil de GitHub
-      </a>
-    </div>
-  </Section>
-  <Section>
-    <div class='text-3xl sm:text-4xl font-semibold text-gray-100'>
-      <h2 id='projects'>Algunos proyectos:</h2>
-    </div>
-    <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6'>
-      {projects.map((project: Project) => <ProjectCard project={project} />)}
-    </div>
-  </Section>
-  <Section>
-    <div class='text-3xl sm:text-4xl font-semibold text-gray-100'>
-      <h2 id='tools'>Herramientas usadas:</h2>
-    </div>
-    <Carousel client:load />
-  </Section>
+<Layout title='Jeferson Limay | Estudiante de TIC'>
+  <main class='min-h-screen'>
+    <section class='py-28 flex flex-col gap-4'>
+      <div class='text-gray-100'>
+        <h1 class='text-[3rem] font-[800] mb-4'>Jeferson Limay</h1>
+        <h4 class='text-xl font-[500] mb-4'>Estudiante de TIC</h4>
+        <p class='text-gray-200'>
+          Programador autodidacta que se dedica realizar cosas pequeñas en la
+          web con el objetivo de trabajar para una empresa y crecer como
+          programador.
+        </p>
+      </div>
+      <div class='text-gray-100 [&>a]:inline-block hover:[&>a]:text-green'>
+        <a href='https://github.com/JefersonLC' target='_blank'>
+          <GitHubIcon />
+        </a>
+      </div>
+    </section>
+    <section>
+      <div id='#about'>
+        <h5 class='mb-6 text-2xl text-gray-100 font-[700]'>Acerca de mí</h5>
+        <div class='text-gray-200'>
+          <p class='mb-2 [&>span]:text-green'>
+            Desde 2019 estoy estudiando <span>TIC</span> y en 2021 fue que entré en el mundo
+            del desarrollo web realizando mi primera aplicación web <span>(ecommerce)</span>
+            junto con mi equipo, el siguiente año volvería a realizar un nuevo
+            proyecto, una aplicación de recordatorios, con los mismos compañeros
+            del año anterior. Fuí desarrollando costumbres autodidactas
+            aprendiendo lenguajes y frameworks para empezar con mis propios
+            proyectos personales.
+          </p>
+          <p class='mb-2'>
+            Sé que aún me falta mucho por aprender y conocimientos por pulir,
+            pero es algo en lo que estoy trabajando.
+          </p>
+          <p>
+            Si estás interesado y deseas ayudarme no dudes en contactarme. 
+            <span class='text-gray-100'>;)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
