@@ -1,5 +1,7 @@
 ---
-import SectionContent from '../components/SectionContent.astro'
+import About from '../components/About.astro'
+import Projects from '../components/Projects.astro'
+import Skills from '../components/Skills.astro'
 import GitHubIcon from '../icons/social/GitHubIcon.astro'
 import Layout from '../layouts/Layout.astro'
 
@@ -17,7 +19,7 @@ export interface Project {
 
 <Layout title='Jeferson Limay | Estudiante de TIC'>
   <main class='min-h-screen'>
-    <section class='py-28 flex flex-col gap-4'>
+    <section class='py-24 flex flex-col gap-4'>
       <div class='text-gray-100'>
         <h1 class='text-[3rem] font-[800] mb-4'>Jeferson Limay</h1>
         <h4 class='text-xl font-[500] mb-4'>Estudiante de TIC</h4>
@@ -34,27 +36,9 @@ export interface Project {
       </div>
     </section>
     <section>
-      <SectionContent id='#about' title='Acerca de mí'>
-        <div class='text-gray-200'>
-          <p class='mb-2 [&>span]:text-green'>
-            Desde 2019 estoy estudiando <span>TIC</span> y en 2021 fue que entré en el mundo
-            del desarrollo web realizando mi primera aplicación web <span>(ecommerce)</span>
-            junto con mi equipo, el siguiente año volvería a realizar un nuevo
-            proyecto, una aplicación de recordatorios, con los mismos compañeros
-            del año anterior. Fuí desarrollando costumbres autodidactas
-            aprendiendo lenguajes y frameworks para empezar con mis propios
-            proyectos personales.
-          </p>
-          <p class='mb-2'>
-            Sé que aún me falta mucho por aprender y conocimientos por pulir,
-            pero es algo en lo que estoy trabajando.
-          </p>
-          <p>
-            Si estás interesado y deseas ayudarme no dudes en contactarme. 
-            <span class='text-gray-100'>;)</span>
-          </p>
-        </div>
-      </SectionContent>
+      <About />
+      <Projects />
+      <Skills />
     </section>
   </main>
 </Layout>
