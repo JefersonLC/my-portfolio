@@ -22,28 +22,16 @@ export const icons = [
     Icon: CSSIcon,
   },
   {
-    name: 'Tailwind',
-    Icon: TailWindIcon,
-  },
-  {
     name: 'JavaScript',
     Icon: JavaScriptIcon,
   },
   {
-    name: 'TypeScript',
-    Icon: TypeScriptIcon,
+    name: 'Git',
+    Icon: GitIcon,
   },
   {
     name: 'React',
     Icon: ReactIcon,
-  },
-  {
-    name: 'NextJS',
-    Icon: NextIcon,
-  },
-  {
-    name: 'Supabase',
-    Icon: SupabaseIcon,
   },
   {
     name: 'MySQL',
@@ -54,7 +42,19 @@ export const icons = [
     Icon: ExpressIcon,
   },
   {
-    name: 'Git',
-    Icon: GitIcon,
+    name: 'NextJS',
+    Icon: NextIcon,
+  },
+  {
+    name: 'Tailwind',
+    Icon: TailWindIcon,
+  },
+  {
+    name: 'TypeScript',
+    Icon: TypeScriptIcon,
+  },
+  {
+    name: 'Supabase',
+    Icon: SupabaseIcon,
   },
 ]
