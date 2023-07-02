@@ -1,7 +1,9 @@
 ---
+import projects from '../utils/projects.json';
+import ProjectCard from './ProjectCard.astro';
 import SectionContent from './SectionContent.astro';
 ---
 
 <SectionContent id='#projects' title='Proyectos'>
-        
+  {projects.map((project) => <ProjectCard project={project} />)}
 </SectionContent>
