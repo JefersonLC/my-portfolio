@@ -1,6 +1,7 @@
 ---
 import ForkIcon from '../icons/ForkIcon.astro'
 import StarIcon from '../icons/StarIcon.astro'
+import InProduction from './InProduction.astro'
 import Language from './Language.astro'
 
 interface Project {
@@ -34,8 +35,8 @@ const { project } = Astro.props as { project: Project }
     </div>
   </div>
   <div class='px-6 py-4'>
-    {project.link && 'In production'}
-    <p class='mt-2 text-gray-200'>{project.description}</p>
+    <p class='my-2 text-gray-200'>{project.description}</p>
+    {project.link && <InProduction link={project.link} />}
   </div>
   <div class='px-6 mt-4 flex gap-2 flex-wrap'>
     {project.languages.map((language) => <Language>{language}</Language>)}
