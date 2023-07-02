@@ -1,0 +1,15 @@
+---
+import RedirectIcon from '../icons/RedirectIcon.astro';
+
+const { link } = Astro.props
+---
+
+<div class='flex text-gray-100 text-sm'>
+  <a
+    href={`https://` + link}
+    target='_blank'
+    class='flex items-center gap-2 bg-blue-200 py-[1px] px-4 rounded-xl hover:text-green'
+  >
+    In production <RedirectIcon />
+  </a>
+</div>
