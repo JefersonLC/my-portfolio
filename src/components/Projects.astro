@@ -5,7 +5,7 @@ import SectionContent from './SectionContent.astro';
 ---
 
 <SectionContent id='#projects' title='Proyectos'>
-  <div class='grid grid-cols-1 sm:grid-cols-2 gap-3'>
+  <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-1'>
     {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 </SectionContent>
