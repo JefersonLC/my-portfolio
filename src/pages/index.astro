@@ -8,9 +8,11 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Jeferson Limay | Estudiante de TIC'>
-  <main class='min-h-screen'>
-    <section class='py-24 flex flex-col gap-4'>
-      <div class='text-gray-100'>
+  <main class='lg:flex xl:px-20 2xl:px-40 2xl:mx-20'>
+    <section
+      class='py-24 flex flex-col gap-4 lg:sticky lg:top-0 lg:h-screen lg:justify-between'
+    >
+      <div class='text-gray-100 sm:w-[500px] lg:pr-4'>
         <h1 class='text-[3rem] font-[800] mb-4'>Jeferson Limay</h1>
         <h4 class='text-xl font-[500] mb-4'>Estudiante de TIC</h4>
         <p class='text-gray-200'>
@@ -19,13 +21,20 @@ import Layout from '../layouts/Layout.astro'
           programador.
         </p>
       </div>
-      <div class='text-gray-100 [&>a]:inline-block hover:[&>a]:text-green'>
-        <a href='https://github.com/JefersonLC' target='_blank'>
+      <div
+        class='text-gray-100 [&>a]:inline-block hover:[&>a]:text-green lg:pr-4'
+      >
+        <a
+          href='https://github.com/JefersonLC'
+          target='_blank'
+          title='Github'
+          referrerpolicy='no-referrer'
+        >
           <GitHubIcon />
         </a>
       </div>
     </section>
-    <section>
+    <section class='lg:pt-24'>
       <About />
       <Projects />
       <Skills />
