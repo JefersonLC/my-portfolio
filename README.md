@@ -9,8 +9,8 @@ This repository contains the source code and necessary files for my personal por
 
 ## Technologies Used
 
-- Star
+- Astro
 - Tailwind CSS
-- javascript
-- typescript
+- JavaScript
+- TypeScript
 - Git
