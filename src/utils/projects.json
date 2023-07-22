@@ -14,8 +14,8 @@
     "description": "Calculator developed with React and deployed in Vercel",
     "slug": "react_calculator",
     "languages": ["JavaScript", "CSS", "HTML"],
-    "stars": 1,
-    "forks": 0,
+    "stars": 2,
+    "forks": 1,
     "link": "react-calculator-phi-rouge.vercel.app",
     "sourceCode": "https://github.com/JefersonLC/react_calculator"
   },
@@ -28,5 +28,15 @@
     "forks": 0,
     "link": "link-fawn.vercel.app",
     "sourceCode": "https://github.com/JefersonLC/url-shortener"
+  },
+  {
+    "title": "Find Countries",
+    "description": "Maybe your browser is blocking API requests",
+    "slug": "react_find-countries",
+    "languages": ["JavaScript", "CSS", "TypeScript", "HTML"],
+    "stars": 1,
+    "forks": 0,
+    "link": "countries-cjl.vercel.app/",
+    "sourceCode": "https://github.com/JefersonLC/react_find-countries"
   }
 ]
