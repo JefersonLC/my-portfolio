@@ -5,6 +5,7 @@ const links = [
   'https://github.com/JefersonLC/react_tic-tac-toe',
   'https://github.com/JefersonLC/react_calculator',
   'https://github.com/JefersonLC/url-shortener',
+  'https://github.com/JefersonLC/react_find-countries',
 ]
 
 const browser = await firefox.launch({ headless: true })
