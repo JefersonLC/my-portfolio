@@ -1,8 +1,14 @@
 ---
-const { id, title } = Astro.props
+const { id, title, viewT } = Astro.props
 ---
 
 <div id={id} class='mb-24'>
-  <h5 class='mb-6 text-2xl text-gray-100 font-[700]'>{title}</h5>
+  <h5
+    class='mb-6 text-2xl text-gray-100 font-[700]'
+    transition:name={viewT}
+    transition:animate={viewT && 'slide'}
+  >
+    {title}
+  </h5>
   <slot />
 </div>
