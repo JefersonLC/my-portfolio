@@ -6,6 +6,8 @@ const links = [
   'https://github.com/JefersonLC/react_calculator',
   'https://github.com/JefersonLC/url-shortener',
   'https://github.com/JefersonLC/react_find-countries',
+  'https://github.com/JefersonLC/api_realtime-chat',
+  'https://github.com/JefersonLC/react_realtime-chat',
 ]
 
 const browser = await firefox.launch({ headless: true })
