@@ -15,7 +15,7 @@
     "slug": "react_calculator",
     "languages": ["JavaScript", "CSS", "HTML"],
     "stars": 2,
-    "forks": 1,
+    "forks": 2,
     "link": "react-calculator-phi-rouge.vercel.app",
     "sourceCode": "https://github.com/JefersonLC/react_calculator"
   },
@@ -38,5 +38,25 @@
     "forks": 0,
     "link": "countries-cjl.vercel.app/",
     "sourceCode": "https://github.com/JefersonLC/react_find-countries"
+  },
+  {
+    "title": "API Realtime Chat",
+    "description": "API of a chat application developed in express and using websockets",
+    "slug": "api_realtime-chat",
+    "languages": ["TypeScript"],
+    "stars": 1,
+    "forks": 0,
+    "link": "api-chat-31lh.onrender.com",
+    "sourceCode": "https://github.com/JefersonLC/api_realtime-chat"
+  },
+  {
+    "title": "Realtime chat",
+    "description": "Chat application using an API made by me, developed with React and deployed with Vercel.",
+    "slug": "react_realtime-chat",
+    "languages": ["TypeScript", "JavaScript", "HTML", "CSS"],
+    "stars": 1,
+    "forks": 0,
+    "link": "chat-jefersonlc.vercel.app",
+    "sourceCode": "https://github.com/JefersonLC/react_realtime-chat"
   }
 ]
