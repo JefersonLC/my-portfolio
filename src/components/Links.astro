@@ -1,0 +1,23 @@
+---
+import { links } from '../utils/links';
+---
+
+<div class='hidden lg:mb-56 lg:block lg:pl-4'>
+  <ul class='text-gray-100 flex flex-col gap-8'>
+    {
+      links.map((link) => (
+        <li class='relative'>
+          <a
+            href={link.href}
+            class={`before:absolute before:content-[""] before:left-0
+            before:top-[50%] before:w-10 before:h-[2px] before:bg-green
+            pl-12 hover:text-green hover:text-xl transition-all
+            hover:pl-16 hover:before:w-14 before:transition-all`}
+          >
+            {link.children}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
