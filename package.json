@@ -1,7 +1,12 @@
 {
   "name": "astro-app",
   "type": "module",
-  "version": "1.6.2",
+  "version": "1.6.3",
+  "author": "@JefersonLC",
+  "description": "My personal portfolio",
+  "repository": "https://github.com/JefersonLC/my-portfolio",
+  "readme": "https://github.com/JefersonLC/my-portfolio/blob/main/README.md",
+  "bugs": "https://github.com/JefersonLC/my-portfolio/issues",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
