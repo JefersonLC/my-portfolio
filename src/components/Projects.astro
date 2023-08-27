@@ -10,7 +10,7 @@ const MAX_PROJECTS = 3
   <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-1'>    
     {
       projects
-        .filter((_, index) => index < MAX_PROJECTS)
+        .slice(0, MAX_PROJECTS)
         .map((project) => <ProjectCard project={project} />)
     }
   </div>
