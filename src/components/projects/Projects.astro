@@ -1,13 +1,13 @@
 ---
-import projects from '../utils/projects.json';
-import ProjectCard from './ProjectCard.astro';
-import SectionContent from './SectionContent.astro';
+import projects from '../../utils/projects.json';
+import SectionContent from '../SectionContent.astro';
+import ProjectCard from './card/ProjectCard.astro';
 
 const MAX_PROJECTS = 3
 ---
 
 <SectionContent id='projects' title='Proyectos' viewT='title'>
-  <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-1'>    
+  <div class='grid grid-cols-1 sm:grid-cols-2 gap-3 lg:grid-cols-1'>
     {
       projects
         .slice(0, MAX_PROJECTS)
