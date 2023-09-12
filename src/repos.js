@@ -57,7 +57,7 @@ async function getRepositories() {
       description: repo.description,
       slug: repo.name,
       language: repo.language,
-      start: repo.stargazers_count,
+      stars: repo.stargazers_count,
       forks: repo.forks_count,
       link: repo.homepage,
       sourceCode: repo.html_url,
