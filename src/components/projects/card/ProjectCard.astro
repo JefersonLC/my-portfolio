@@ -38,7 +38,8 @@ const { project } = Astro.props as { project: Project }
     <p class='my-2 text-gray-200'>{project.description}</p>
     {project.link && <InProduction link={project.link} />}
   </div>
-  <div class='px-6 mt-4 flex gap-2 flex-wrap'>
-    <Language>{project.language}</Language>)}
-  </div>
+  <p class='px-6 mt-4'>
+    <span class='text-gray-200 mr-4 text-sm'>Language:</span>
+    <Language>{project.language}</Language>
+  </p>
 </div>
