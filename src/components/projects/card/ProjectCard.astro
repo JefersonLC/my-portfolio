@@ -8,7 +8,7 @@ interface Project {
   title: string
   slug: string
   description: string
-  languages: string[]
+  language: string
   sourceCode: string
   link: string
   stars: number
@@ -39,6 +39,6 @@ const { project } = Astro.props as { project: Project }
     {project.link && <InProduction link={project.link} />}
   </div>
   <div class='px-6 mt-4 flex gap-2 flex-wrap'>
-    {project.languages.map((language) => <Language>{language}</Language>)}
+    <Language>{project.language}</Language>)}
   </div>
 </div>
