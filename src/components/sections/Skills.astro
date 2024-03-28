@@ -1,0 +1,17 @@
+---
+import Section from '@components/Section.astro'
+
+import { skills } from '@data'
+---
+
+<Section title="Habilidades">
+  <ul class="inline-flex gap-2 flex-wrap">
+    {
+      skills.map(({ name }) => (
+        <li class="rounded-md bg-slate-200 text-slate-900 text-sm font-medium py-1 px-3">
+          <span>{name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

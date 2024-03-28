@@ -1,0 +1,89 @@
+---
+import Section from '@components/Section.astro'
+import SocialButton from '@components/SocialButton.astro'
+import WorldMap from '@icons/WorldMap.astro'
+import Mail from '@icons/Mail.astro'
+import Phone from '@icons/Phone.astro'
+import GitHub from '@icons/GitHub.astro'
+import LinkedIn from '@icons/LinkedIn.astro'
+import X from '@icons/X.astro'
+import { basics } from '@data'
+
+const { name, label, image, location, profiles, phone, email } = basics
+const { city, region } = location
+
+const SOCIAL_ICONS: Record<string, any> = { LinkedIn, GitHub, X }
+
+const linkedInfo = profiles.find(({ network }) => network === 'LinkedIn')
+const linkedUrl = linkedInfo?.url
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(' • ')
+---
+
+<Section>
+  <div class="flex flex-row items-center justify-between gap-4">
+    <div class="flex flex-col gap-2 pr-8">
+      <h1 class="text-3xl font-bold text-slate-900">{name}</h1>
+      <h2 class="font-medium text-lg text-balance text-slate-700">{label}</h2>
+      <span
+        class="flex items-center gap-1 text-sm tracking-tighter text-slate-500"
+      >
+        <WorldMap />
+        {city}, {region}
+      </span>
+      <footer>
+        <div class="hidden print:block">
+          {printInfo}
+        </div>
+      </footer>
+      <footer class="flex gap-2 mt-2 print:hidden">
+        {
+          email && (
+            <SocialButton
+              href={`mailto:${email}`}
+              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+            >
+              <Mail />
+            </SocialButton>
+          )
+        }
+
+        {
+          phone && (
+            <SocialButton
+              href={`tel:${phone}`}
+              title={`Llamar por teléfono a ${name} al número ${phone}`}
+            >
+              <Phone />
+            </SocialButton>
+          )
+        }
+        {
+          profiles.map(({ network, url, username }) => {
+            const Icon = SOCIAL_ICONS[network]
+
+            return (
+              <SocialButton
+                href={url}
+                title={`Visitar el perfil de ${username} en ${network}`}
+              >
+                <Icon />
+              </SocialButton>
+            )
+          })
+        }
+      </footer>
+    </div>
+    {
+      image && (
+        <figure>
+          <img
+            class="aspect-square object-cover w-32 rounded-md"
+            src={image}
+            alt={name}
+          />
+        </figure>
+      )
+    }
+  </div>
+</Section>

@@ -5,9 +5,10 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
+      "@data": ["./data.json"],
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/icons/*"],
-      "@layouts/*": ["src/layouts/*"],
+      "@layouts/*": ["src/layouts/*"]
     }
   }
 }
