@@ -189,9 +189,9 @@
     {
       "name": "Linksy",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes"
+      "description": "Acortador de enlaces eficientes y facil de usar.",
+      "highlights": ["Acorta cualquier link", "En desarrollo"],
+      "url": "https://link-fawn.vercel.app/"
     }
   ]
 }
