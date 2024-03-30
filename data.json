@@ -189,7 +189,7 @@
     {
       "name": "Linksy",
       "isActive": true,
-      "description": "Acortador de enlaces eficientes y facil de usar.",
+      "description": "Acortador de enlaces eficiente y facil de usar.",
       "highlights": ["Acorta cualquier link", "En desarrollo"],
       "url": "https://link-fawn.vercel.app/"
     }
