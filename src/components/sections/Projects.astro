@@ -1,38 +1,53 @@
 ---
 import Section from '@components/Section.astro'
+import GitHub from '@icons/GitHub.astro'
 
 import { projects } from '@data'
 ---
 
 <Section title="Proyectos">
-  <ul class="grid gap-4">
+  <ul
+    class="grid gap-4 ms-[-16px] me-[-16px] min-[700px]:ms-0 min-[700px]:me-0"
+  >
     {
-      projects.map(({ url, description, highlights, name, isActive }) => (
-        <li>
-          <article class="rounded-lg border border-solid flex gap-4 flex-col p-4 h-full">
-            <header class="flex-1">
-              <h3 class="font-bold text-xl mb-1">
-                <a
-                  class="text-slate-900 hover:underline"
-                  href={url}
-                  title={`Ver el proyecto ${name}`}
-                >
-                  {name}
-                </a>
-                {isActive && <span class="text-emerald-500">&bull;</span>}
-              </h3>
-              <p class="mb-1">{description}</p>
-            </header>
-            <footer class="flex flex-wrap gap-1">
-              {highlights.map((highlight) => (
-                <span class="rounded-md bg-slate-200 text-slate-700 text-xs font-medium py-1 px-3">
-                  {highlight}
-                </span>
-              ))}
-            </footer>
-          </article>
-        </li>
-      ))
+      projects.map(
+        ({ url, description, highlights, name, isActive, github }) => (
+          <li>
+            <article class="rounded-lg border border-none flex gap-4 flex-col p-4 h-full min-[700px]:border-solid">
+              <header class="flex-1">
+                <h3 class="font-semibold flex gap-1 items-center mb-1">
+                  <a
+                    class="text-slate-900 hover:underline"
+                    href={url}
+                    title={`Ver el proyecto ${name}`}
+                  >
+                    {name}
+                  </a>
+                  {isActive && <span class="text-emerald-500">&bull;</span>}
+                  {github && (
+                    <a
+                      class=" ml-1"
+                      href={github}
+                      target="_blank"
+                      title={`Ver código fuente del proyecto ${name}`}
+                    >
+                      <GitHub />
+                    </a>
+                  )}
+                </h3>
+                <p class="text-xs leading-5 mb-1">{description}</p>
+              </header>
+              <footer class="flex flex-wrap gap-1">
+                {highlights.map((highlight) => (
+                  <span class="rounded-md bg-slate-200 text-slate-700 text-xs font-medium py-1 px-3">
+                    {highlight}
+                  </span>
+                ))}
+              </footer>
+            </article>
+          </li>
+        )
+      )
     }
   </ul>
 </Section>
