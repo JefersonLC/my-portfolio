@@ -32,52 +32,16 @@
       "summary": ""
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
-    }
-  ],
   "education": [
     {
       "institution": "SENATI",
       "url": "https://www.senati.edu.pe/",
       "area": "Tecnologías de la Información y Comunicación",
       "studyType": "Profesional tecnológico",
-      "startDate": "01-02-2019",
-      "endDate": "30-12-2023",
+      "startDate": "01-01-2019",
+      "endDate": "01-01-2024",
       "score": "",
       "courses": ["CCNA - Switching, Routing and Wireless Essentials"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
     }
   ],
   "skills": [
@@ -163,35 +127,14 @@
       "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
     }
   ],
-  "languages": [
-    {
-      "language": "Spanish",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Advanced"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
   "projects": [
     {
       "name": "Linksy",
       "isActive": true,
       "description": "Acortador de enlaces eficiente y facil de usar.",
       "highlights": ["Acorta cualquier link", "En desarrollo"],
-      "url": "https://link-fawn.vercel.app/"
+      "url": "https://link-fawn.vercel.app/",
+      "github": "https://github.com/JefersonLC/url-shortener"
     }
   ]
 }
