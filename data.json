@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Jeferson Limay",
-    "label": "Junior Web Developer",
+    "label": "Estudiante autodidacta de programación",
     "image": "",
     "email": "c.jeferson.lc@gmail.com",
-    "phone": "+51 986 947 227",
-    "url": "https://midu.dev",
+    "phone": "+51 963553479",
+    "url": "https://github.com/JefersonLC",
     "summary": "Programador autodidacta. He estudiado Tecnologías de la Información y Comunicación en el instituto SENATI donde realicé algunos proyectos académicos de desarrollo web en equipo. Me encuentro en busqueda de una oportunidad laboral donde pueda crecer como programador ",
     "location": {
       "address": "",
@@ -132,9 +132,20 @@
       "name": "Linksy",
       "isActive": true,
       "description": "Acortador de enlaces eficiente y facil de usar.",
-      "highlights": ["Acorta cualquier link", "En desarrollo"],
+      "highlights": ["Acorta cualquier link", "En desarrollo", "Abandonado"],
       "url": "https://link-fawn.vercel.app/",
       "github": "https://github.com/JefersonLC/url-shortener"
+    },
+    {
+      "name": "Fake WhatsApp Chat Generator",
+      "isActive": true,
+      "description": "Generador de chats falsos de WhatsApp. Es un clon simple de 'https://www.fakewhats.com/generator'",
+      "highlights": [
+        "Genera chats falsos de WhatsApp",
+        "En desarrollo"
+      ],
+      "url": "https://fake-whatsapp-chat-generator.vercel.app/",
+      "github": "https://github.com/JefersonLC/fake_whatsapp_chat_generator"
     }
   ]
 }

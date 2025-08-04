@@ -1,9 +1,10 @@
-import tailwind from '@astrojs/tailwind'
-import { defineConfig } from 'astro/config'
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  compressHTML: true,
+   vite: {
+    plugins: [tailwindcss()],
+  },
   site: 'https://jeferson-portfolio.vercel.app/',
-})
+  compressHTML: true,
+});
