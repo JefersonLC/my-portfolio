@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "vite": "7.0.6"
+  },
+  "engines": {
+    "node": ">=18.20.8"
   }
 }
